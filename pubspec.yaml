@@ -1,6 +1,6 @@
 name: refresh_ios_widget
 description: Refresh new iOS 14 widgets inside dart
-version: 1.0.3
+version: 1.0.4
 homepage: https://declan.sh
 
 environment:
@@ -19,4 +19,4 @@ flutter:
   plugin:
     platforms:
       ios:
-        pluginClass: RefreshIosWidget
+        pluginClass: RefreshIosWidgetPlugin
