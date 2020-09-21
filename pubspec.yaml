@@ -1,7 +1,6 @@
 name: refresh_ios_widget
 description: Refresh iOS 14 widget
 version: 1.0.0
-author: declanwoods
 homepage: https://declan.sh
 
 environment:

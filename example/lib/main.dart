@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-  }  
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +29,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: FlatButton(
-            onPressed: () async {
-              await RefreshIosWidget.refreshAllWidget();
-            },
-            child: Text("Refresh"),
-          )
-        ),
+            child: FlatButton(
+          onPressed: () async {
+            await RefreshIosWidget.refreshAllWidget();
+          },
+          child: Text("Refresh"),
+        )),
       ),
     );
   }
