@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Fix iOS registrant
+
 ## 1.0.3
 
 * Append
