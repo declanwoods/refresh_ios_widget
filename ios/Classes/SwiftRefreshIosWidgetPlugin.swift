@@ -15,7 +15,7 @@ public class SwiftRefreshIosWidgetPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "refreshWidget" {
       if #available(iOS 14, *) {
-        WidgetCenter.shared.reloadTimelines(ofKind: call.arguments["id"])
+        WidgetCenter.shared.reloadTimelines(ofKind: (call.arguments as! NSDictionary)["id"])
       }
       result(true)
     } else if call.method == "refreshAllWidgets" {
@@ -23,8 +23,6 @@ public class SwiftRefreshIosWidgetPlugin: NSObject, FlutterPlugin {
         WidgetCenter.shared.reloadAllTimelines()
       }
       result(true)
-    } else {
-      result(FlutterNotImplementedMethod)
     }
   }
 }
