@@ -1,6 +1,6 @@
 name: refresh_ios_widget
 description: Refresh new iOS 14 widgets inside dart
-version: 1.0.4
+version: 1.0.5
 homepage: https://declan.sh
 
 environment:

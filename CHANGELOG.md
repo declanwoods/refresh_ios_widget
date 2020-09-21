@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Restrict to non-armv7 devices
+
 ## 1.0.4
 
 * Fix iOS registrant
