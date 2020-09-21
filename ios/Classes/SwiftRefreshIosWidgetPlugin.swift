@@ -1,6 +1,9 @@
 import Flutter
 import UIKit
-import WidgetKit
+
+#if canImport(WidgetKit)
+  import WidgetKit
+#endif
 
 public class SwiftRefreshIosWidgetPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -11,10 +14,14 @@ public class SwiftRefreshIosWidgetPlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "refreshWidget" {
-      WidgetCenter.shared.reloadTimelines(ofKind: call.arguments["id"])
+      if #available(iOS 14, *) {
+        WidgetCenter.shared.reloadTimelines(ofKind: call.arguments["id"])
+      }
       result(true)
-    } else if call.method == "refreshAllWidget" {
-      WidgetCenter.shared.reloadAllTimelines()
+    } else if call.method == "refreshAllWidgets" {
+      if #available(iOS 14, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      }
       result(true)
     } else {
       result(FlutterNotImplementedMethod)

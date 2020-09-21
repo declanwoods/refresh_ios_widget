@@ -10,7 +10,7 @@ class RefreshIosWidget {
     await _channel.invokeMethod('refreshWidget', <String, dynamic>{'id': id});
   }
 
-  static Future<void> refreshAllWidget() async {
-    await _channel.invokeMethod('refreshAllWidget');
+  static Future<void> refreshAllWidgets() async {
+    await _channel.invokeMethod('refreshAllWidgets');
   }
 }

@@ -26,12 +26,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Refresh All Widgets App'),
         ),
         body: Center(
             child: FlatButton(
           onPressed: () async {
-            await RefreshIosWidget.refreshAllWidget();
+            await RefreshIosWidget.refreshAllWidgets();
           },
           child: Text("Refresh"),
         )),
